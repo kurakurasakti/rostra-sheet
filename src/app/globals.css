@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.625rem;
+  /* Solana-inspired Color System - Light Mode (More Accessible) */
+  --background: 0 0% 100%;
+  --foreground: 220 20% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 20% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 20% 10%;
+  --primary: 142 65% 40%; /* more accessible vibrant green */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 20% 10%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 142 60% 45%; /* more accessible accent green */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 142 65% 40%;
+  /* Gradient colors - Solana-inspired but more accessible */
+  --gradient-start: 142 65% 40%;
+  --gradient-middle: 150 60% 45%;
+  --gradient-end: 160 55% 50%;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  /* Solana-inspired glass morphism effects */
+  --glass-bg: oklch(0.98 0 0 / 0.8);
+  --glass-border: oklch(0.92 0 0 / 0.2);
+  --glass-blur: 10px;
+}
+
+.dark {
+  /* Dark Mode - Darker background, less green (More Accessible) */
+  --background: 220 20% 8%; /* very dark gray */
+  --foreground: 220 14% 96%; /* gray-100 dark */
+  --card: 220 20% 12%; /* dark gray */
+  --card-foreground: 220 14% 96%; /* gray-100 dark */
+  --popover: 220 20% 12%; /* dark gray */
+  --popover-foreground: 220 14% 96%; /* gray-100 dark */
+  --primary: 142 70% 36%; /* more accessible green for primary elements */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 20% 16%; /* darker gray */
+  --secondary-foreground: 220 14% 96%; /* gray-100 dark */
+  --muted: 220 20% 16%; /* darker gray */
+  --muted-foreground: 215 16% 65%;
+  --accent: 142 60% 40%; /* more accessible dark green accent */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 63% 73%;
+  --border: 220 20% 20%; /* darker border */
+  --input: 220 20% 20%; /* darker input */
+  --ring: 142 70% 36%; /* more accessible green for focus */
+  /* Darker gradient colors for dark mode - more accessible */
+  --gradient-start: 142 65% 20%; /* more accessible dark green */
+  --gradient-middle: 150 60% 25%; /* middle gradient */
+  --gradient-end: 160 55% 30%; /* more accessible dark green-blue */
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+  /* Dark mode glass morphism effects */
+  --glass-bg: oklch(0.2 0 0 / 0.7);
+  --glass-border: oklch(0.3 0 0 / 0.3);
+  --glass-blur: 15px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
