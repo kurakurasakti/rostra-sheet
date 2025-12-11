@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { FileText, Zap } from 'lucide-react'
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { FileText, Zap } from "lucide-react";
 
-import { ThemeToggle } from '@/components/common/theme-toggle'
-import { Button } from '@/components/ui/button'
+import { ThemeToggle } from "@/components/common/theme-toggle";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   return (
@@ -28,25 +28,36 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="#features" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#features"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Features
           </Link>
-          <Link href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#pricing"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Pricing
           </Link>
-          <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#how-it-works"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             How it Works
           </Link>
         </nav>
 
         <div className="flex items-center space-x-2">
           <ThemeToggle />
-          <Button className="hidden sm:flex items-center space-x-2">
-            <Zap className="h-4 w-4" />
-            <span>Get Started</span>
+          <Button asChild className="hidden sm:flex items-center space-x-2">
+            <Link href="/upload">
+              <Zap className="h-4 w-4" />
+              <span>Get Started</span>
+            </Link>
           </Button>
         </div>
       </div>
     </motion.header>
-  )
+  );
 }

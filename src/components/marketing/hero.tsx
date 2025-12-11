@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Shield, Clock, Sparkles } from "lucide-react";
 
@@ -134,11 +135,14 @@ export function Hero() {
               >
                 <Button
                   size="lg"
+                  asChild
                   className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/20"
                 >
-                  <Zap className="mr-2 h-5 w-5" />
-                  Reserve Early Access - $5
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <Link href="/upload">
+                    <Zap className="mr-2 h-5 w-5" />
+                    Reserve Early Access - $5
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
               </motion.div>
 
@@ -187,7 +191,7 @@ export function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -top-8 -right-8 bg-primary text-primary-foreground rounded-full p-4 shadow-lg"
+                className="absolute -top-8 -right-8 bg-primary text-primary-foreground rounded-full p-4 shadow-lg z-20"
               >
                 <Zap className="h-8 w-8" />
               </motion.div>
@@ -212,7 +216,7 @@ export function Hero() {
               </motion.div> */}
 
               {/* Main card - Enhanced Solana glass morphism */}
-              <div className="relative rounded-3xl bg-glass-bg backdrop-blur-[var(--glass-blur)] p-8 border border-glass-border shadow-2xl">
+              <div className="relative rounded-3xl bg-glass-bg backdrop-blur-[var(--glass-blur)] p-8 border border-glass-border shadow-2xl z-10">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-3">
                     <div className="h-3 w-3 rounded-full bg-red-500"></div>
